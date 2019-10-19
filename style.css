@@ -1,0 +1,438 @@
+/* FONT */
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('font/poppins/Poppins-Regular.ttf'); 
+}
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('font/poppins/Poppins-Medium.ttf'); 
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('font/poppins/Poppins-Bold.ttf'); 
+}
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('font/poppins/Poppins-SemiBold.ttf'); 
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('font/montserrat/Montserrat-Bold.ttf'); 
+}
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+border-bottom: 1px solid #f48fb1;
+box-shadow: 0 1px 0 0 #f48fb1;
+}
+.active-pink input[type=text] {
+border-bottom: 1px solid #f48fb1;
+box-shadow: 0 1px 0 0 #f48fb1;
+}
+.active-purple-2 input[type=text]:focus:not([readonly]) {
+border-bottom: 1px solid #ce93d8;
+box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-purple input[type=text] {
+border-bottom: 1px solid #ce93d8;
+box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+border-bottom: 1px solid #4dd0e1;
+box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input[type=text] {
+border-bottom: 1px solid #4dd0e1;
+box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan .fa, .active-cyan-2 .fa {
+color: #4dd0e1;
+}
+.active-purple .fa, .active-purple-2 .fa {
+color: #ce93d8;
+}
+.active-pink .fa, .active-pink-2 .fa {
+color: #f48fb1;
+}
+/* Sided Bar */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #45454D;
+    overflow-x: hidden;
+    padding-top: 81px;
+    border-radius: 0px 50px 50px 0px;
+}
+  
+.sidenav a {
+    font-family: Poppins-Regular;
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    font-family: Poppins-Bold;
+    background-color:white;
+    font-size: 15px;
+    border-radius: 30px 0px 0px 30px;
+    color: #45454D;
+}
+
+  
+.sidenav b {
+    font-family: Poppins-Regular;
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #E5EA4C;
+    display: block;
+}
+
+.sidenav b:hover {
+    font-family: Poppins-Bold;
+    background-color:#E5EA4C;
+    font-size: 15px;
+    border-radius: 30px 0px 0px 30px;
+    color: rgb(20, 20, 20);
+}
+
+
+
+.main {
+    margin-left: 0px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Search */
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-purple input[type=text] {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-purple .fa, .active-purple-2 .fa {
+    color: #ce93d8;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+body
+{
+    font-family: Poppins-Regular;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+ }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.txt1 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #999999;
+}
+  
+.txt2 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #ba89ae;
+}
+
+.txt3 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #ba89ae;
+}
+
+.page
+{
+    background-color: #f2f2f2;
+    height: 100vh;
+    color: rgb(0,0,0);
+}
+.login-pict {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+form[name="login-form-username"]:hover input
+ {
+     font-family: Poppins-Regular;
+     letter-spacing: 1px;
+     width: 65%;
+     padding: 1.5%;
+     background-color: white;
+     color: rgba(149, 84, 133, 1);
+     border:3px solid;
+     border-image-source: linear-gradient(90deg, rgba(149, 84, 133, 1), white);
+     border-image-slice: 1;
+ }
+form[name="login-form-username"] input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 65%;
+    padding: 1.5%;
+    background-color: white;
+    color: rgba(149, 84, 133, 1);
+    border: solid 3px white;
+}
+form[name="login-form-password"]:hover input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 65%;
+    padding: 1.5%;
+    background-color: white;
+    color: rgba(149, 84, 133, 1);
+    border: 3px solid;
+    border-image-source: linear-gradient(90deg, rgba(149, 84, 133, 1), white);
+    border-image-slice: 1;
+}
+form[name="login-form-password"] input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 65%;
+    padding: 1.5%;
+    background-color: white;
+    color: rgba(149, 84, 133, 1);
+    border: solid 3px white;
+}
+form[name="daftar-kotak-pendek"] input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 49%;
+    padding: 1.5%;
+    background-color: white;
+    color: black;
+    border: solid 3px white;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px #000;
+}
+form[name="daftar-kotak-panjang"] input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1.5%;
+    background-color: white;
+    color: black;
+    border: solid 3px white;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px #000;
+}
+form[name="daftar-kotak"] input
+{
+    font-family: Poppins-Regular;
+    letter-spacing: 1px;
+    width: 75px;
+    padding: 1.5%;
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+}
+
+input:focus
+{
+    outline: none;
+}
+button[name="login-btn"]
+{
+    font-family: Poppins-Bold;
+    color: rgba(117, 19, 93, 0.5);
+    background-color:white;
+    width: 65%;
+    padding: 3%;
+}
+button[name="login-btn"]:hover
+{
+    color: white;
+    background-color: rgba(117, 19, 93, 0.5);
+}
+button[name="thread-btn"]
+{
+    font-family: Poppins-Bold;
+    color: rgba(117, 19, 93, 0.5);
+    background-color:white;
+    width: 20%;
+    padding: 1%;
+}
+button[name="thread-btn"]:hover
+{
+    color: white;
+    background-color: rgba(117, 19, 93, 0.5);
+}
+button[name="daftar-btn"]
+{
+    font-family: Poppins-Bold;
+    color: #0E78AC;
+    background-color:white;
+    width: 100%;
+}
+button[name="daftar-btn"]:hover
+{
+    color: white;
+    background-color:#0E78AC;
+}
+.atas
+{
+    position: relative;
+    background-color: black;
+}
+.atas #logout
+{
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.atas #home
+{
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+.Foto
+{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#ribbon-nama
+{
+    background-color: black; 
+    color: white;     
+    letter-spacing: 2.5px;
+    background-size: cover;
+    font-size: large;
+    font-weight: lighter;
+    padding: 5%;
+}
+#ribbon-nama-bawah
+{
+    background-color: black; 
+    color: white;     
+    letter-spacing: 2.5px;
+    background-size: cover;
+    font-size: large;
+    font-weight: lighter;
+    padding: 5%;
+}
+button[name="button-baru"]
+{
+    opacity: 1;
+    color: blue;
+    background-color: #bbbbbb;
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+}
+.btn-normal
+{
+    background-color: black;
+    color: white;
+}
+.btn-normal:hover
+{
+    background-color: black;
+    color: white;
+}
+
